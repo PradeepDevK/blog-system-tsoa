@@ -1,0 +1,25 @@
+npm init -y
+
+npm install express tsoa prisma @prisma/client typescript ts-node-dev body-parser
+
+npm install --save-dev @types/express @types/node
+
+npx tsc --init
+
+npx prisma init
+
+// Post schema
+npx prisma migrate dev --name init
+npx prisma generate
+
+// Post Controller, defined
+
+npx tsoa routes
+
+npm install swagger-ui-express
+
+npm install --save-dev @types/swagger-ui-express
+
+npx tsoa spec
+
+npx ts-node-dev src/server.ts
